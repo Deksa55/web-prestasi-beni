@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestasi Moklet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #ff0000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px;
+        }
+        .video-container {
+            flex: 3;
+        }
+        iframe {
+            width: 100%;
+            height: 80vh; /* Menggunakan viewport height untuk menyesuaikan tinggi video */
+            border-radius: 5px;
+        }
+        .prestasi-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .prestasi {
+            background: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .prestasi:hover {
+            background-color: #e0e0e0;
+        }
+        .footer {
+            background-color: #ff0000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            iframe {
+                height: 50vh; /* Menyesuaikan tinggi video untuk layar kecil */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">Prestasi Moklet</div>
+
+    <div class="container">
+        <!-- Video -->
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GasPCAgDrhI?si=XdA1-dhOkCJ8keLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- Daftar Prestasi -->
+        <div class="prestasi-container">
+            <div class="prestasi">Prestasi 1</div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2udLd3_0nGk?si=8csACLv1dpdI6G3T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="prestasi">Prestasi 2</div>
+            <div class="prestasi">Prestasi 3</div>
+            <div class="prestasi">Prestasi 4</div>
+            <div class="prestasi">Prestasi 5</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span class="marquee">Selamat Datang di Website Prestasi Moklet! 🔥 Lihat berbagai prestasi terbaru dari siswa terbaik kami!</span>
+    </div>
+
+</body>
+</html>
